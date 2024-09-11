@@ -9,11 +9,6 @@ class resolvconf (
   $sortlist    = ['UNSET'],
 ) {
 
-  # Validates domain
-  if is_domain_name($domain) != true {
-    fail("Domain name, ${domain}, is invalid.")
-  }
-
   # manage resolv.conf
   file { 'resolv.conf':
     ensure  => file,
